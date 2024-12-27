@@ -1,0 +1,77 @@
+.HiddenCards{
+    /* z-index: 10; */
+    animation: move forwards 1s;
+    transition: all ease-in-out 1s;
+    /* max-width: 1500px; */
+    position: relative;
+
+}
+
+@keyframes move{ 
+    from{
+        width: 30%;
+        height: 30%;
+    }
+
+    to{
+        width: 75vh;
+        height: 75vh;
+    }
+}
+
+.grow{
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+  background: var(--color-light-1);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+} 
+
+.growin{
+    height: 98%;
+    width: 98%;
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+    /* background: linear-gradient(90deg, var(--color-dark-3), var(--color-dark-2), var(--color-dark-1)); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url('../../assets/haxagon.avif');
+  }
+ 
+.grow-h5{
+    font-size: 1.5rem;
+    transition: all 1s ease-in-out;
+    background-size: cover;
+    font-size: 2.5vw;
+    text-shadow: 1px 1px 10px var(--color-light-2);
+    background-image: url('../../assets/haxa-text.jpeg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.grow1{
+    right: 8%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-self: center;
+}
+
+.grow2{
+    top: 8%;
+    left: 8%;
+}
+
+.grow3{
+    bottom: 8%;
+    left: 10%;
+}

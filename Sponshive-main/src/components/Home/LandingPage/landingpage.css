@@ -1,0 +1,253 @@
+
+:root {
+  --color-black: rgb(0, 0, 0);
+  --color-dark-1: #2B2724;
+  --color-dark-2: #1c1c1c;
+  --color-dark-3: #53544C;
+  --color-white: white;
+  --color-border: white;
+  --color-text: white;
+  --color-light-1: #21589F;
+  --color-light-2: #AAD9F6;
+  --color-light-3: rgba(184, 201, 214, 0.776);
+  --color-light-4: rgba(76, 131, 170, 0.776);
+  --color-dark-4: rgba(43, 39, 36,.8);
+  --color-dark-5: rgba(28, 28, 28,.8);
+  --color-dark-6: rgba(83, 84, 76,.7);
+  --color-dark-7: rgba(0, 0, 0, 0.776);
+  --color-red: rgb(232, 232, 232);
+}
+
+
+.LandingPage{
+  height: 95%;
+  width: 60%;
+  z-index: 2;
+  background-size: 50px;
+  background-repeat: repeat; 
+  background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));
+  box-shadow: 0px 10px 20px var(--color-light-1); 
+  border-top: 2px solid var(--color-light-2); 
+  border-bottom: 2px solid var(--color-light-2);
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ } 
+ 
+ 
+ .landingPageChild{  
+  height: 97%;
+  width: 97%;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  border-image-source: linear-gradient(to right, var(--color-red), var(--color-black));
+  border-image-slice: 1;
+  position: absolute; 
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+ }
+ 
+  .hexagonP{
+   height: 20vw; 
+   width: 20vw;
+   aspect-ratio: cos(30deg);
+   clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+   background: linear-gradient(to right, var(--color-light-1),var(--color-light-2));
+   display: flex; 
+   justify-content: center;  
+   align-items: center;
+   z-index: 3;
+   /* font-size: 3rem; */
+   transition: all 0.5s ease-in-out;
+   cursor: pointer;
+  }
+ 
+  /* .hexagonP:hover{ 
+    height: 40%; 
+    width: 30%;
+    background: linear-gradient(180deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));
+    .hexagon .hexagonChild .hexagonGrandChild .hexagonGreatGrandChild .work{
+      text-shadow: 2px 3px 3px var(--color-light-2) !important ; 
+      font-size: 2.5vw;
+    } 
+ } */
+
+ .hexagonPAminate{
+  display: none;
+  height: 15%;
+   width: 10%;
+   transition: all 0.3s ease-in-out;
+   /* z-index: 10; */
+   /* transform: rotate(360deg); */
+
+   
+ }
+ 
+ .hexagon {
+     height: 99.5%; 
+     width: 99.5%; 
+     aspect-ratio: cos(30deg);
+     clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+     background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));
+     display: flex; 
+     justify-content: center;  
+     align-items: center;
+     transition: all 1s ease-in-out;
+     background-image: url('../../../assets/haxagon.avif');
+     background-size: cover;
+     background-position: center;
+   }
+
+   /* .hexagon:hover{ 
+     cursor: pointer;
+     transform: rotateX(-180deg) !important;
+   } */
+ 
+   .hexagonChild {
+     height: 95%;
+     width: 95%; 
+     aspect-ratio: cos(30deg);
+     clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+     background: linear-gradient(to right, var(--color-light-1), var(--color-light-2));
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 1s ease-in-out;
+   }
+
+   /* .hexagonChild:hover {
+     cursor: pointer;
+     transform: rotateX(180deg) !important;
+   } */
+ 
+   .hexagonGrandChild {
+     height: 98%;
+     width: 98%; 
+     aspect-ratio: cos(30deg);
+     clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+     background: linear-gradient(90deg, var(--color-dark-3), var(--color-dark-2), var(--color-dark-1));
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 1s ease-in-out;
+     background-image: url('../../../assets/haxagon.avif');
+     background-size: cover;
+     background-position: center;
+   }
+
+   /* .hexagonGrandChild:hover {
+     cursor: pointer;
+     transform: rotateY(-180deg) !important;
+   } */
+ 
+ 
+   .hexagonGreatGrandChild{
+     height: 80%;
+     width: 90%;
+     aspect-ratio: cos(30deg);
+     clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+     background: linear-gradient(90deg,var(--color-dark-3), var(--color-dark-2), var(--color-dark-1));
+     z-index: 3; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 1s ease-in-out;
+     background-image: url('../../../assets/haxagon.avif');
+     text-shadow: 1px 1px 10px var(--color-light-2);
+     background-size: cover;
+     background-position: center;
+   }
+
+   .hexagonGreatGrandChild:hover{
+     cursor: pointer;
+   }
+ 
+  .work{
+  background-image: url('../../../assets/haxa-text.jpeg');
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 2.8vw;
+  font-weight: bolder;
+  mix-blend-mode: color-burn;
+}
+
+.workText{
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.work2{
+  transition: all 1s ease-in-out;
+  background-image: url('../../../assets/haxa-text.jpeg');
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 2.9vw;
+  mix-blend-mode: color-burn;
+}
+
+ 
+   @media  (max-width: 900px) { 
+     .LandingPage {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+     }
+     .hexagonP{
+      height: 40vw; 
+      width: 40vw;
+     }
+
+     .work{
+      font-size: 3.8vw;
+     }
+
+     /* .card{
+      position: static !important;
+     } */
+
+     /* .card1{
+      top: 110% !important;
+      left: 50% !important;
+      right: 50% !important;
+      transform: translatex(-50%) !important;
+     }
+
+     .card2{
+      top: 110%;
+      left: 1% !important;
+     }
+
+     .card3{
+      top: 110%;
+      right: 1% !important;
+     } */
+   }
+
+   @media (max-width: 600px) {
+     .hexagonP{
+      height: 40vw; 
+      width: 40vw;
+     }
+
+     .work{
+      font-size: 5.8vw;
+     }
+   }
+   @media (max-width: 451px) {
+     .hexagonP{
+      height: 60vw; 
+      width: 60vw;
+     }
+
+     .work{
+      font-size: 6.8vw;
+     }
+   }
