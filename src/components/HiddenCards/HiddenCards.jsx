@@ -42,17 +42,17 @@ export default function HiddenCards() {
     >
       <div className="grow grow1" ref={setRef}>
         <div className="growin">
-            <h3 className="grow-h5">Events </h3>
+            <h3 className="grow-h5">Sponsors </h3>
         </div>
       </div>
       <div className="grow grow2" ref={setRef2}>
         <div className="growin">
-            <h3 className="grow-h5">Celebs </h3>
+            <h3 className="grow-h5">Events </h3>
         </div>
-      </div>
-      <div className="grow grow3" ref={setRef3}>
+      </div> 
+      <div className="grow grow3" ref={setRef3}> 
         <div className="growin">
-            <h3 className="grow-h5">Sponsors </h3>
+            <h3 className="grow-h5">Celebs </h3>
         </div>
       </div>
     </Box>

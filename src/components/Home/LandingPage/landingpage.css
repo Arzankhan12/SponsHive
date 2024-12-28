@@ -1,40 +1,25 @@
 
-:root {
-  --color-black: rgb(0, 0, 0);
-  --color-dark-1: #2B2724;
-  --color-dark-2: #1c1c1c;
-  --color-dark-3: #53544C;
-  --color-white: white;
-  --color-border: white;
-  --color-text: white;
-  --color-light-1: #21589F;
-  --color-light-2: #AAD9F6;
-  --color-light-3: rgba(184, 201, 214, 0.776);
-  --color-light-4: rgba(76, 131, 170, 0.776);
-  --color-dark-4: rgba(43, 39, 36,.8);
-  --color-dark-5: rgba(28, 28, 28,.8);
-  --color-dark-6: rgba(83, 84, 76,.7);
-  --color-dark-7: rgba(0, 0, 0, 0.776);
-  --color-red: rgb(232, 232, 232);
-}
-
-
 .LandingPage{
   height: 95%;
-  width: 60%;
+  width: 65%;
   z-index: 2;
-  background-size: 50px;
-  background-repeat: repeat; 
-  background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));
+  /* background-size: 50px; */
+  /* background-repeat: repeat;  */
+  /* background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3)); */
   /* background-image: url('../../assets/haxagon.avif'); */
-  box-shadow: 0px 10px 20px var(--color-light-1); 
-  border-top: 2px solid var(--color-light-2); 
-  border-bottom: 2px solid var(--color-light-2);
-  border-radius: 15px;
+  /* box-shadow: 0px 10px 20px var(--color-light-1);  */
+  /* border-top: 2px solid var(--color-light-2);  */
+  /* border-bottom: 2px solid var(--color-light-2); */
+  border-top: 1px solid var(--color-dark-1);
+  border-bottom: 1px solid var(--color-dark-1);
+  border-radius: 25px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background: transparent; */
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.096);
  } 
  
  
@@ -42,7 +27,7 @@
   height: 97%;
   width: 97%;
   border-radius: 10px;
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
   border-image-source: linear-gradient(to right, var(--color-red), var(--color-black));
   border-image-slice: 1;
   position: absolute; 
@@ -56,12 +41,13 @@
    width: 20vw;
    aspect-ratio: cos(30deg);
    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
-   background: linear-gradient(to right, var(--color-light-1),var(--color-light-2));
+   /* background: linear-gradient(to right, var(--color-light-1),var(--color-light-2)); */
+   background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));
    display: flex; 
    justify-content: center;  
    align-items: center;
    z-index: 3;
-   transition: all 0.5s ease-in-out;
+   transition: all 0.5s ease-in-out; 
    cursor: pointer;
   }
  
@@ -83,7 +69,8 @@
      justify-content: center;  
      align-items: center;
      transition: all 1s ease-in-out;
-     background-image: url('../../../assets/haxagon.avif');
+     /* background-image: url('../../../assets/haxagon.avif'); */
+     background-image: url('../../../assets/purpleImg.jpg');
      background-size: cover;
      background-position: center;
    }
@@ -93,7 +80,9 @@
      width: 95%; 
      aspect-ratio: cos(30deg);
      clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
-     background: linear-gradient(to right, var(--color-light-1), var(--color-light-2));
+     /* background: linear-gradient(to right, var(--color-light-1), var(--color-light-2));  */
+     background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));
+
      display: flex;
      justify-content: center;
      align-items: center;
@@ -110,7 +99,8 @@
      justify-content: center;
      align-items: center;
      transition: all 1s ease-in-out;
-     background-image: url('../../../assets/haxagon.avif');
+     /* background-image: url('../../../assets/haxagon.avif'); */
+     background-image: url('../../../assets/purpleImg.jpg');
      background-size: cover;
      background-position: center;
    }
@@ -202,7 +192,7 @@
    }
 
    .overlayFilter {
-    position: fixed;
+    /* position: absolute; */
     z-index: 9 !important;
     display: none;
     width: 100%;
@@ -211,13 +201,26 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: transparent;
-    background: rgba(255, 255, 255, 0.096); 
-    backdrop-filter: blur(8px); 
+    /* background: transparent; */ 
+    /* background: rgba(255, 255, 255, 0.096);  */
+    background: linear-gradient(var(--color-dark-1),var(--color-dark-2),var(--color-dark-3));
+    /* background: url('https://i.pinimg.com/originals/e4/80/72/e4807255da9fc1fa2ebb5c8e036434b1.gif'); */
+    background-size: 100% 100%;
+    transform: rotate(360deg);
+    backdrop-filter: blur(14px);
+    opacity: 0.8;
   }
 
-  .overlayFilterBlock{
-   display: block !important;   
+  .overlayFilterBlock{ 
+    display: flex;
+    top: -5%;
+    left: 50%;
+    right: 50%;
+    position: absolute;
+    transform: translate(-50%);
+   display: block !important;  
+   height: 105vh;
+   width: 100vw !important; 
   }
 
    @media (max-width: 600px) {

@@ -6,9 +6,12 @@
 /*  Global colors */
 :root {
   --color-black: rgb(0, 0, 0);
-  --color-dark-1: #2B2724;
-  --color-dark-2: #1c1c1c;
-  --color-dark-3: #53544C;
+  /* --color-dark-1: #2B2724; */;
+  --color-dark-1: #CE00AD;
+  /* --color-dark-2: #1c1c1c; */
+  --color-dark-2: #510042;
+  /* --color-dark-3: #53544C; */
+  --color-dark-3: #300027;
   --color-white: white;
   --color-border: white;
   --color-text: white;
