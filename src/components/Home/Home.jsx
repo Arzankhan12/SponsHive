@@ -8,7 +8,7 @@ const Home = () => {
     <div className='home'>
       <div className="sponsiveLogo">SPONSHIVE</div>
     <LandingPage/> 
-    <img src={fabric} alt=""/>
+    {/* <img src={fabric} alt=""/> */}
     </div> 
   )                    
 } 

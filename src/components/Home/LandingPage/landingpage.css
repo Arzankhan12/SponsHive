@@ -10,18 +10,25 @@
   /* box-shadow: 0px 10px 20px var(--color-light-1);  */
   /* border-top: 2px solid var(--color-light-2);  */
   /* border-bottom: 2px solid var(--color-light-2); */
-  border-top: 1px solid var(--color-dark-1);
-  border-bottom: 1px solid var(--color-dark-1);
+  /* border-top: 1px solid var(--color-dark-1); */
+  /* border-bottom: 1px solid var(--color-dark-1); */
   border-radius: 25px;
+  box-shadow: 5px 5px 100px gray;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   /* background: transparent; */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.096);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+
  } 
- 
+ @property --rot{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
  
  .landingPageChild{  
   height: 97%;
@@ -42,15 +49,29 @@
    aspect-ratio: cos(30deg);
    clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
    /* background: linear-gradient(to right, var(--color-light-1),var(--color-light-2)); */
-   background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));
+   /* background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));   */
    display: flex; 
    justify-content: center;  
    align-items: center;
    z-index: 3;
    transition: all 0.5s ease-in-out; 
    cursor: pointer;
+   animation: 
+   rotation 8s linear infinite,
+   bob 2s ease-in-out infinite alternate;
+ animation-delay: 7s , 1500ms;
+ background: conic-gradient(from var(--rot) at 50% 50%, var(--color-dark-1) 0deg,var(--color-dark-2) 90deg, var(--color-dark-3),var(--color-dark-1) 360deg);
   }
  
+  @keyframes rotation {
+    from {
+      --rot: 0deg;
+  
+    }
+    to {
+      --rot: 360deg;
+    }
+  }
 
  .hexagonPAminate{
   display: none;
@@ -81,8 +102,12 @@
      aspect-ratio: cos(30deg);
      clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
      /* background: linear-gradient(to right, var(--color-light-1), var(--color-light-2));  */
-     background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3));
-
+     /* background: linear-gradient(90deg, var(--color-dark-1), var(--color-dark-2), var(--color-dark-3)); */
+     animation: 
+     rotation 8s linear infinite,
+     bob 2s ease-in-out infinite alternate;
+     animation-delay: 7s , 1500ms;
+     background: conic-gradient(from var(--rot) at 50% 50%, var(--color-dark-3) 0deg,var(--color-dark-1) 90deg, var(--color-dark-3),var(--color-dark-3) 360deg);
      display: flex;
      justify-content: center;
      align-items: center;
