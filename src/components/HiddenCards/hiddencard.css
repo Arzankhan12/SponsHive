@@ -1,0 +1,86 @@
+.HiddenCards{
+    animation: move forwards 0.5s;
+    transition: all ease-in-out 0.5s;
+    position: relative;
+    cursor: pointer;
+    z-index: 10 !important;
+}
+
+@keyframes move{ 
+    from{
+        width: 30%;
+        height: 30%;
+    }
+
+    to{
+        width: 75vh;
+        height: 75vh;
+    }
+}
+
+.grow{
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+  background: var(--color-light-1);
+  /* background: linear-gradient(90deg, var(--color-dark-3), var(--color-dark-2), var(--color-dark-1)); */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+} 
+
+.growin{
+    height: 99%;
+    width: 99%;
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+    /* background: linear-gradient(90deg, var(--color-dark-3), var(--color-dark-2), var(--color-dark-1)); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url('../../assets/haxagon.avif');
+  }
+ 
+.grow-h5{
+    font-size: 1.5rem;
+    transition: all 1s ease-in-out;
+    background-size: cover;
+    font-size: 2.5vw;
+    text-shadow: 1px 1px 10px var(--color-light-2);
+    background-image: url('../../assets/haxa-text.jpeg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.grow-h5:hover{ 
+    color: var(--color-light-2) !important; 
+}
+
+
+.grow1{
+    /* right: 8%; */
+    right: 9%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-self: center;
+}
+
+.grow2{
+    /* top: 8%; */
+    top: 9.5%;
+    left: 10%;
+}
+
+.grow3{
+    /* bottom: 8%; */
+    bottom: 9.5%;
+    left: 10%; 
+} 

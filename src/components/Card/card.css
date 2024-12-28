@@ -1,0 +1,127 @@
+
+.card{ 
+ position: absolute; 
+ height: 35%;      
+ width: 200px;
+ z-index: 8;      
+ background: transparent;
+ /* background: linear-gradient(360deg, var(--color-dark-4),var(--color-dark-5),var(--color-dark-6)); */
+ background: rgba(255, 255, 255, 0.096);
+ backdrop-filter: blur(10px);        
+ border-radius: 10px;
+ color: var(--color-white); 
+ padding: 10px; 
+ cursor: pointer !important;
+}
+
+.card1{ 
+    left: -140px;
+    top: 70px; 
+    transition: all ease-in-out 0.3s;
+}
+
+.card2{
+    left: -45px;
+    bottom: 15px; 
+    transition: all ease-in-out 0.3s;
+}
+
+.card3{
+    right: -45px;
+    bottom: 50px;
+    transition: all ease-in-out 0.3s;
+}
+
+
+.card1Anime{
+    left: -250px;
+    /* left: -240px; */
+    z-index: 1;
+    /* filter: blur(2px); */
+}
+
+.card2Anime{
+    left: -250px;  
+    /* left: -145px; */
+    z-index: 1;
+    /* filter: blur(2px); */
+}
+
+.card3Anime{
+    right: -250px;  
+    /* right: -145px; */
+    z-index: 1;
+    /* filter: blur(2px); */
+}
+
+h2{
+  text-align: center;
+  margin: 0px;
+  text-shadow: 2px 2px var(--color-light-4);
+}
+
+
+.btnCard{
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 20px;
+    /* border: 2px solid var(--color-white); */
+    border: none;
+    color: var(--color-white);
+    font-size: large;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: inset -5px -5px 20px 5px var(--color-light-4)
+    , inset 5px 5px 20px 5px var(--color-dark-7);
+
+    transition: all ease-in-out 0.3s;
+}
+    .btnCard:hover{
+     background-color: var(--color-white);
+     font-size: larger;
+     background: transparent;
+    box-shadow: inset -5px -5px 20px 5px rgba(184, 201, 214, 0.776)
+    , inset 5px 5px 20px 5px var(--color-dark-7);
+    }
+
+    .floating {  
+        animation-name: floating;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out; 
+    }
+    
+    @keyframes floating{ 
+        from { transform: translate(0,  0px); }
+        65%  { transform: translate(0, 10px); }
+        to   { transform: translate(0, -0px); }    
+    }
+
+
+
+    @media  (max-width: 900px) { 
+   
+        .card{
+         position: absolute !important;
+         top: 120% !important;
+        }
+    
+        .card1{
+         /* left: 50% !important;
+         right: 50% !important;
+         transform: translatex(-50%) !important; */
+         top: 170% !important;
+         left: 1% !important;
+        }
+   
+        .card2{
+         /* top: 110%; */
+         left: 1% !important;
+        }
+   
+        .card3{
+         /* top: 110%; */
+         right: 1% !important;
+        }
+      }
