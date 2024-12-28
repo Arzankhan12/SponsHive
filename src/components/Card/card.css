@@ -12,7 +12,12 @@
  color: var(--color-white); 
  padding: 10px; 
  cursor: pointer !important;
+
+ p{
+    text-align: center;
+ }
 }
+
 
 .card1{ 
     left: -140px;
@@ -63,7 +68,7 @@ h2{
 
 .btnCard{
     width: 90%;
-    margin: auto;
+    /* margin: auto; */ 
     padding: 5px;
     border-radius: 20px;
     /* border: 2px solid var(--color-white); */
